@@ -1,0 +1,156 @@
+\documentclass[11pt,oneside,a4paper]{book}
+%\documentclass[11pt,oneside,a4paper,draft]{book}
+
+\usepackage{fullpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{lscape}
+\usepackage{multicol}
+\usepackage{cmll}
+
+\usepackage{varioref}
+\renewcommand{\reftextcurrent}{}
+\renewcommand*{\thepage}{\small\thepage}
+
+\renewcommand\reftextfaceafter {on the next page}
+\renewcommand\reftextafter {on the next page}
+\renewcommand\reftextfacebefore{on the previous page}
+\renewcommand\reftextbefore {on the previous page}
+
+\usepackage{pifont}
+
+\usepackage{euler}
+\usepackage{titlesec}
+
+
+\usepackage{parcolumns}
+
+\usepackage{float}
+\addtolength{\headsep}{50pt}
+\addtolength{\footskip}{10pt}
+
+\renewcommand{\chaptername}{}
+\renewcommand{\appendixname}{}
+
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\usepackage[noadjust]{cite}
+\renewcommand{\citeform}[1]{\small{\textbf{#1}}}
+
+\usepackage{etex}
+\usepackage{color, colortbl}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{alltt}
+
+
+\usepackage[printonlyused]{acronym}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage{emptypage}
+
+\definecolor{halfgray}{gray}{0.55}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{0pt}
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{sectsty}
+%\renewcommand*{\partname}{\color{black}Part}
+
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\raggedright}{\chaptertitlename \raggedleft\fontsize{45}{0}\selectfont$ \thechapter$}{0ex}{\LARGE}
+[\vspace{0.5ex}%
+{\titlerule[0.5pt]}]
+
+\usepackage{flafter}   
+\usepackage{alltt}
+ \definecolor{Gray}{gray}{0.95}
+
+\renewcommand*\contentsname{{Contents}}
+\renewcommand*\listfigurename{{List of figures}}
+\renewcommand*\listtablename{{List of tables}}
+\renewcommand{\bibname}{{References}}
+\renewcommand*\lstlistlistingname{List of listings}
+
+\let\cleardoublepage\clearpage
+
+\usepackage{etoolbox}
+
+
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[expert]{mathdesign}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf}
+\usepackage{todonotes}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithmic}
+
+
+\usepackage[titletoc]{appendix}
+
+\usepackage{rotating}
+
+\usepackage[all]{xy}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{mathtools}
+\usepackage{circuitikz}
+\floatplacement{figure}{htpb} 
+
+\usepackage[pdftex,pdfauthor={P. Arun Babu}, pdftitle={Software reliability in safety critical supervision and control of nuclear reactors}, pdfkeywords={Software reliability, Software safety, Safety-critical software, Nuclear power plants, Software verification, Software test adequacy, Mutation testing, Equivalent mutants, Higher order mutants},  colorlinks=true,citecolor=black, urlcolor=black, linkcolor=black]{hyperref}
+%\usepackage[pdftex,pdfauthor={P. Arun Babu}, pdftitle={Software reliability in safety critical supervision and control of nuclear reactors}, pdfkeywords={Software reliability, Software safety, Safety critical software, Nuclear power plants, Software verification, Software test adequacy, Mutation testing, Equivalent mutants, Higher order mutants},  colorlinks=true, citecolor=RoyalBlue, urlcolor=RoyalBlue, linkcolor=RoyalBlue]{hyperref}
+
+\usepackage[english]{cleveref}
+
+\usepackage[nottoc]{tocbibind}
+\usepackage{setspace}\doublespacing    
+\textfloatsep 0.75in                 
+\usepackage[left=1.5in,right=1in,top=1.3in,bottom=1.3in]{geometry}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+%\usepackage[final,protrusion=true,expansion=true]{microtype}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+
+\lstset{%
+language=C++,
+emphstyle={\color{red}\textbf},
+basicstyle=\footnotesize\ttfamily\color{black},
+commentstyle = \footnotesize\ttfamily\color{brown},
+keywordstyle=\footnotesize\ttfamily\color{RoyalBlue},
+stringstyle=\footnotesize\ttyfamily\color{orange}}
+
+\usepackage{etex}
+\usepackage{tikz}
+
+
+\usepackage{xstring}
+\usepackage[titles]{tocloft}
+
+
+\let\oldequation = \equation
+\let\endoldequation = \endequation
+\AtBeginDocument{\let\oldlabel = \label}
+\newcommand{\mynewlabel}[1]{%
+  \StrBehind{#1}{eq:}[\Str]
+  \myequations{\Str}\oldlabel{#1}}
+  \renewenvironment{equation}{%
+  \oldequation
+  \let\label\mynewlabel
+}{\endoldequation}
+
+\newcommand{\listequationsname}{List of equations}
+\newlistof{myequations}{equ}{\listequationsname}
+\newcommand{\myequations}[1]{%
+      \addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}}
+\setlength{\cftmyequationsnumwidth}{3em}

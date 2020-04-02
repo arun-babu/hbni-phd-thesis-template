@@ -1,0 +1,23 @@
+\section{Summary of results}
+This chapter shows how results of software testing can be used to estimate software reliability.
+The main observations of the study are:
+\begin{enumerate}
+\item The test adequacy is the major factor in determining the software reliability in systems
+related to safety.
+\item The estimated software reliability is a function of test adequacy $(adequacy(T)$),
+the amount of verification carried out $(x)$, and the amount of verified code reused $(y)$.
+%\item The test adequacy is the limiting factor for achieving the software
+%reliability in systems important to safety. \todo{Fix}
+\item For a given software reliability target, as the value of $x$ increases, the requirement
+for $y$ decreases. The decrease in required value of $y$ exhibits
+linear to exponential behavior as the target reliability increases,
+and becomes a step function as the $Reliability \rightarrow adequacy(T)$ and
+$x\rightarrow1$.
+\item The proposed approach re-iterates the fact that: achieving high reliability
+for software with high reusability is relatively easier.
+\item For software with high test adequacy, values of $x$,
+$y$ may give some insights on properties of the software.
+\item The probability of software failure in the case studies have been found to be lesser than 10$^{-5}$ for a random input from the input domain.
+\end{enumerate}
+
+%The approaches presented in the chapter can be used by safety-critical software developers to improve the software reliability. Also, regulators may use the techniques to verify reliability, safety and dependability claims. \todo{REPEATED}

@@ -1,0 +1,83 @@
+\begin{sidewaystable}
+\centering
+\small{
+\begin{tabular}{clll}
+\toprule
+{\bf \#}&{\bf Technique} & {\bf Major advantages} & {\bf Gaps / difficulties / disadvantages}\tabularnewline
+\toprule\\
+1&Formal methods & i) Is rigorous and systematic in nature. & (i) Is labor intensive, difficult in practice for large projects.\tabularnewline
+& & ii) Focuses on correctness at the early  & (ii) Proof/Specification may also contain bugs/errors.\tabularnewline
+ && \quad\quad stages of software development. & (iii) Generally, does not consider the factors associated \tabularnewline
+ && iii) Supports automatic code generation. & \quad\quad with the target compiler/hardware/environment.\tabularnewline
+ &&  & \tabularnewline\hline\\
+2&Verification and  & (i) Can be performed by an independent agency. & (i) Process is usually manual.\tabularnewline
+&validation & (ii) Focuses on functional correctness.& (ii) Results are usually check-list based and qualitative.\tabularnewline
+ &&  & \tabularnewline\hline\\
+3& Classical software& (i) Results reflect the real environment. & (i) Exhaustive testing is impractical.\tabularnewline
+ &testing& (ii) Amount of testing is quantifiable through& (ii) Cannot prove absence of bugs.\tabularnewline
+ && \quad\quad test coverage.&\\
+ &&  & \tabularnewline\hline\\
+4& Mutation based& (i) An effective method to assess the quality of test cases.& (i) Is computationally expensive.\tabularnewline
+ &testing& (ii) Its result (the mutation score) is an indication& (ii) Suffers from the equivalent mutants problem.\tabularnewline
+ && \quad\quad of test adequacy. &\\
+ && & \tabularnewline\hline\\
+5& Model checking  & (i) Exhaustively searches for all nodes and transitions. & (i) Is computationally expensive.\tabularnewline
+ && (ii) Automatic test cases can be generated. & (ii) Requires model to be represented in the form of a\tabularnewline
+ &&(iii) Can generate counter examples for failed properties.&\quad\quad state diagram.\tabularnewline
+ &&  & \tabularnewline
+\bottomrule
+\end{tabular}}
+\caption{\label{tab:literature-review-1}Summary of the related work - I}
+\end{sidewaystable}
+
+\begin{sidewaystable}
+\begin{centering}
+\small{
+\begin{tabular}{clll}
+\toprule
+{\bf \#}&{\bf Technique} & {\bf Major advantages} & {\bf Gaps / difficulties / disadvantages}\tabularnewline
+\toprule\\
+6&Fuzz testing & (i) Effective in detecting security/safety related bugs. & (i) Relies heavily on random numbers.\tabularnewline
+& & (ii) Attempts to detect bugs/crashes which are often difficult&\tabularnewline
+&&\quad in manual testing.&\\
+& &  & \tabularnewline\hline\\
+7&Reliability& (i) Is black-box based approach, and is independent & (i) Requires enough and accurate failure data.\tabularnewline
+&growth models&\quad of the source code/architecture of the system.&(ii) Based on assumptions which may not be\\
+& & (ii) Gives quick assessment of reliability. &\quad\quad acceptable for critical software.\\
+ &&  & \tabularnewline\hline\\
+8& Markov models & (i) Clearly describes both the failure of an item& (i) Practical limitation due to state space explosion.\tabularnewline
+&&\qquad and its subsequent repair.&\\
+ &&(ii) Can handle probability of an event resulting from&\tabularnewline
+ && \qquad a sequence of sub-events& \tabularnewline
+ &&& \tabularnewline\hline\\
+9&Bayesian belief & (i) Allows combining different kinds/sources of data.& (i) Requires expert BBN developers.\tabularnewline
+&networks (BBN) & (ii) Allows uncertainties in parameters to be& (ii) Qualification of experts could be an issue.\tabularnewline
+&& \qquad taken in to account.&(iii) Difficulty in collecting enough and accurate\tabularnewline
+&&&\qquad data for new products.\tabularnewline
+ &&  & \tabularnewline\hline\\
+10&Architecture& (i) Based on through analysis of the software architecture.& (i) Requires expert/experienced personnel.\tabularnewline
+&based models& &(ii) Generally, does not consider the factors associated \tabularnewline
+ && &\quad with the target compiler/hardware/environment. \tabularnewline
+ && &\tabularnewline
+\bottomrule
+\end{tabular}}
+\par\end{centering}
+
+\caption{\label{tab:literature-review-2}Summary of the related work - II}
+\end{sidewaystable}
+
+\section{Summary}
+Literature review revealed some of the limitations in existing methods, and also the difficulties in using them to estimate software reliability (\emph{\Vrefrange{tab:literature-review-1}{tab:literature-review-2}}). The main gaps or limitations observed in existing methods are:
+\begin{enumerate}
+\item Results of existing Verification \& Validation (V\&V) techniques are qualitative in nature, and are difficult to be integrated with the \ac{PSA} of a safety-critical system.
+\item Difficulty in practical implementation of formal methods for large and complex applications.
+\item Difficulty in practical implementation of model checking techniques due to the state space explosion problem.
+\item Some of the software test coverage criteria were found to be misleading in certain situations.
+\item The equivalent mutants problem limits the use of mutation testing in practice.
+\item Results obtained through software reliability estimation techniques, which are based on the historical data or expert judgment/opinion may not be accurate for new products.
+\item As software systems grow large and complex, reusability becomes an important factor. Hence, for large and complex systems, black box based software reliability estimation techniques may not be appropriate.
+%\item Use of expert judgement in software reliability quantification is subjective.
+\end{enumerate}
+\ifx\mythesis\undefined
+\Clearpage
+\fi

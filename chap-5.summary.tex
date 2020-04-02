@@ -1,0 +1,24 @@
+\section{Summary of results}
+
+To inspire confidence on safety-critical software, proof of adequate
+testing is a must. This chapter has demonstrated an approach to determine
+the test adequacy through safety-critical case studies in a nuclear
+reactor. The conservative test coverage combined with the mutation score
+is used as a measure of test adequacy. Also, to gain confidence on the computed
+test adequacy, \emph{three} main issues are addressed:
+\begin{enumerate}
+\item To ensure that faults during mutation testing are induced at all execution paths of the software, all the \ac{LCSAJ} triplets of the program under test are concatenated to form a graph. And it is ensured that faults are induced at all possible execution paths of the above graph.
+\item To study the characteristics of unkilled mutants $-$ \ac{PCA} of static, dynamic, and coverage analysis of mutants is performed.
+The \ac{PCA} results of the case studies indicate that the majority of the unkilled
+mutants have similar static, dynamic, and coverage properties as the
+original program. Also, the unkilled mutants have been found to have
+lesser variation in their characteristics when compared to the killed
+mutants. These results give some confidence that: the majority of unkilled
+mutants in the case studies are likely to be equivalent mutants. 
+\item To detect equivalent mutants $-$ a technique to identify equivalent
+mutants has been demonstrated. The proposed technique when applied
+to the case study has resulted in mutation score $\approx$ 1.
+\end{enumerate}
+
+Using the proposed method, high test adequacy in the case studies has been achieved. The computed test adequacy (ignoring the unfeasible \ac{MC/DC}s and \ac{LCSAJ}s), indicate the rigor in software testing carried out. The regulators in safety-critical industries may require the software reliability estimate before permitting the software to be used in the field. The test adequacy value serves as one of the inputs for the software reliability estimate. 
+
