@@ -1,4 +1,4 @@
-# hbni-phd-thesis-template
+# Homi Bhabha National Institute (HBNI) Ph.D/Masters thesis template
 
 Homi Bhabha National Institute (HBNI) thesis template based on [classicthesis](https://ctan.org/tex-archive/macros/latex/contrib/classicthesis/?lang=en) by [André Miede](https://www.miede.de) and Ivo Pletikosić.
 
