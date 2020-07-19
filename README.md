@@ -1,9 +1,9 @@
 # hbni-phd-thesis-template
-HBNI thesis template (not an official template by HBNI)
 
-change the `\student` variable in `thesis.tex`.
+Homi Bhabha National Institute (HBNI) thesis template based on [classicthesis] (https://ctan.org/tex-archive/macros/latex/contrib/classicthesis/?lang=en) by [André Miede](https://www.miede.de) and Ivo Pletikosic.
 
+just change the `\student` variable in `thesis.tex`.
 
 see the generated thesis pdf [HERE](https://github.com/arun-babu/hbni-phd-thesis-template/blob/master/thesis.pdf).
 
-And my thesis here [ENGG02201004005](https://github.com/arun-babu/hbni-phd-thesis-template/blob/master/ENGG02201004005.pdf)
+And my Ph.D thesis here [ENGG02201004005](https://github.com/arun-babu/hbni-phd-thesis-template/blob/master/ENGG02201004005.pdf)
